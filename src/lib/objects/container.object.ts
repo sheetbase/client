@@ -1,10 +1,7 @@
-// NOTE: move this file to build script
+import {Options} from '../types/app.type';
+import {Lib as App} from '../index';
 
-import {Options} from './types/app.type';
-
-import {Lib as App} from './index';
-
-class Container {
+export class ContainerObject {
   private apps: {[name: string]: App} = {};
 
   constructor() {}
@@ -26,14 +23,4 @@ class Container {
     }
     return app;
   }
-}
-
-Object.defineProperty(window, 'SHEETBASE_CONTAINER', {value: new Container()});
-Object.defineProperty(window, 'SHEETBASE_COMPONENTS', {value: {}});
-
-export function initializeApp(options?: Options, name?: string) {
-  return ((window as unknown) as Record<
-    'SHEETBASE_CONTAINER',
-    Container
-  >).SHEETBASE_CONTAINER.createApp(options, name);
 }

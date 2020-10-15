@@ -73,6 +73,8 @@ export class CacheService {
             cacheTime
           );
         }
+      } else {
+        return null;
       }
     } catch (error) {
       // no refresher or error while refreshing
