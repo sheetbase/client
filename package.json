@@ -1,6 +1,6 @@
 {
   "name": "@sheetbase/client",
-  "version": "3.0.0",
+  "version": "3.0.0-beta2",
   "description": "Javascript client for Sheetbase app.",
   "author": "Sheetbase",
   "homepage": "https://sheetbase.dev",
@@ -10,7 +10,9 @@
   "files": [
     "src",
     "!**/*.ts",
-    "**/*.d.ts"
+    "**/*.d.ts",
+    "**/*.js",
+	  "**/*.js.map"
   ],
   "scripts": {
     "compile": "tsc",
