@@ -4,6 +4,7 @@ import {StorageOptions} from '../../storage/types/storage.type';
 import {MailOptions} from '../../mail/types/mail.type';
 import {AuthOptions} from '../../auth/types/auth.type';
 import {ApiService} from '../../api/services/api.service';
+import {DatabaseService} from '../../database/services/database.service';
 
 export interface Options
   extends ApiOptions,
@@ -19,7 +20,9 @@ export interface PopupConfigs {
   callback?: () => unknown;
 }
 
-export type CustomComponents = Array<Constructable<ApiService>>;
+export type CustomComponents = Array<
+  Constructable<ApiService> | Constructable<DatabaseService>
+>;
 
 export interface Constructable<C> {
   new (...args: unknown[]): C;
