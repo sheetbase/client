@@ -1,7 +1,6 @@
 node_modules/
-# testing
+.deploy/
 .nyc_output/
-# distribution
 src/**/*.js
 test/**/*.js
 *.map
