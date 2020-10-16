@@ -1,4 +1,5 @@
-export {initializeApp, Lib as App} from './index';
+export {initializeApp} from './index';
+export {AppObject as App} from './objects/app.object';
 export * from './types/app.type';
 export * from './types/localstorage.type';
 export * from './types/cache.type';
