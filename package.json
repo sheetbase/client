@@ -12,13 +12,13 @@
     "!**/*.ts",
     "**/*.d.ts",
     "**/*.js",
-	  "**/*.js.map"
+    "**/*.js.map"
   ],
   "private": true,
   "scripts": {
     "compile": "tsc",
     "build": "sheetbase-client-scripts build",
-    "deploy": "sheetbase-client-scripts deploy --dry-run",
+    "deploy": "sheetbase-client-scripts deploy",
     "docs": "ayedocs generate",
     "test": "npm run compile && nyc --cache false mocha test/**/*.js",
     "coverage": "nyc --cache false report --reporter=text-lcov | coveralls",
@@ -41,13 +41,13 @@
   "dependencies": {
     "@sheetbase/models": "^3.0.1",
     "localforage": "^1.9.0",
-    "papaparse": "^5.3.0",
+    "papaparse": "4.4.0",
     "pubsub-js": "^1.9.0"
   },
   "devDependencies": {
     "@types/chai": "^4.2.13",
     "@types/mocha": "^8.0.3",
-    "@types/papaparse": "^5.2.3",
+    "@types/papaparse": "5.0.1",
     "@types/pubsub-js": "^1.8.1",
     "chai": "^4.2.0",
     "coveralls": "^3.1.0",
